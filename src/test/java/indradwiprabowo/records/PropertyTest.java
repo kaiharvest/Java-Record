@@ -1,6 +1,7 @@
 package indradwiprabowo.records;
 
 import indradwiprabowo.records.data.Customers;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -48,5 +49,11 @@ public class PropertyTest {
         assertEquals("indra@localhost", customers.email());
 
         System.out.println(customers);
+    }
+
+    @Test
+    void recordMethod() {
+        Customers customers = new Customers("1", "Indra", "indra@localhost");
+        assertEquals("Hello Budi, my Name is Indra", customers.sayHello("Budi"));
     }
 }

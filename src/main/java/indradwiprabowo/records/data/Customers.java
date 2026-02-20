@@ -17,4 +17,8 @@ public record Customers(String id, String name, String email, String phone) {
     public Customers(String id, String name) {
         this(id, name, null, null);
     }
+
+    public String sayHello(String name) {
+        return "Hello " + name + ", my Name is " + this.name;
+    }
 }
