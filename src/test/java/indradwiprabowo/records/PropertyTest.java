@@ -56,4 +56,14 @@ public class PropertyTest {
         Customers customers = new Customers("1", "Indra", "indra@localhost");
         assertEquals("Hello Budi, my Name is Indra", customers.sayHello("Budi"));
     }
+
+    @Test
+    void recordEquals() {
+        Customers customers1 = new Customers("1", "Indra", "indra@localhost");
+        Customers customers2 = new Customers("1", "Indra", "indra@localhost");
+
+        assertTrue(customers1.equals(customers2));
+        assertEquals(customers1.hashCode(), customers1.hashCode());
+        assertEquals(customers1.toString(), customers1.toString());
+    }
 }
