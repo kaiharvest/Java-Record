@@ -1,6 +1,8 @@
 package indradwiprabowo.records.data;
 
-public record Point(int x, int y) {
+import indradwiprabowo.records.anotation.Valid;
+
+public record Point(@Valid int x,@Valid int y) {
 
     public Point {
         System.out.println("Create Point");
