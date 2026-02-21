@@ -1,7 +1,7 @@
 package indradwiprabowo.records;
 
 import indradwiprabowo.records.data.Customers;
-import org.junit.jupiter.api.Assertions;
+import indradwiprabowo.records.data.Point;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -65,5 +65,15 @@ public class PropertyTest {
         assertTrue(customers1.equals(customers2));
         assertEquals(customers1.hashCode(), customers1.hashCode());
         assertEquals(customers1.toString(), customers1.toString());
+    }
+
+    @Test
+    void staticMember() {
+        assertEquals(0, Point.ZERO.x());
+        assertEquals(0, Point.ZERO.y());
+
+        Point point = Point.create(10, 10);
+        assertEquals(10, point.x());
+        assertEquals(10, point.y());
     }
 }
