@@ -1,6 +1,7 @@
 package indradwiprabowo.records;
 
 import indradwiprabowo.records.data.Customers;
+import indradwiprabowo.records.data.Data;
 import indradwiprabowo.records.data.Point;
 import org.junit.jupiter.api.Test;
 
