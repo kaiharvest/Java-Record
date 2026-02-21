@@ -5,6 +5,8 @@ import indradwiprabowo.records.data.Data;
 import indradwiprabowo.records.data.Point;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.RecordComponent;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PropertyTest {
@@ -76,5 +78,17 @@ public class PropertyTest {
         Point point = Point.create(10, 10);
         assertEquals(10, point.x());
         assertEquals(10, point.y());
+    }
+
+    @Test
+    void reflection() {
+        assertTrue(Customers.class.isRecord());
+
+        RecordComponent[] components = Customers.class.getRecordComponents();
+        assertEquals(4, components.length);
+
+        for (RecordComponent component : components) {
+            System.out.println(component.getType());
+        }
     }
 }
