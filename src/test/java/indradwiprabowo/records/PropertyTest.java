@@ -91,4 +91,5 @@ public class PropertyTest {
             System.out.println(component.getType());
         }
     }
+
 }
